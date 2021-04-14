@@ -16,7 +16,7 @@ public class BancoTest {
 
     @Test
     public void testSaque() {
-        assertEquals(100, banco.saque(au));
+        assertEquals(100, banco.saque(59.5));
     }
 
 }
