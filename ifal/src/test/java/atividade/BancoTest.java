@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import atividade.Banco.SaldoInsuficiente;
+
 public class BancoTest {
     Banco banco;
 
@@ -15,7 +17,7 @@ public class BancoTest {
     }
 
     @Test
-    public void testSaque() {
+    public void testSaque() throws SaldoInsuficiente {
 
         assertEquals(banco.getSaldo(), banco.saque(110));
     }

@@ -3,6 +3,10 @@ package atividade;
 public class Banco {
     private double saldo = 100;
 
+    public class SaldoInsuficiente extends Exception {
+        private static final long serialVersionUID = 1L;
+    }
+
     public double getSaldo() {
         return this.saldo;
     }
@@ -11,9 +15,9 @@ public class Banco {
         this.saldo = novosaldo;
     }
 
-    public double saque(double saque) {
+    public double saque(double saque) throws SaldoInsuficiente {
         if (getSaldo() < saque) {
-            return getSaldo();
+            throw new SaldoInsuficiente();
         } else {
             double saldotemp = getSaldo();
             setSaldo(saldotemp - saque);
