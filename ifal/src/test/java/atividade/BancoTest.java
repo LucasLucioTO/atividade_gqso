@@ -19,7 +19,8 @@ public class BancoTest {
     @Test
     public void testSaque() throws SaldoInsuficiente {
 
-        assertEquals(banco.getSaldo(), banco.saque(110));
+        // assertEquals(banco.getSaldo(), banco.saque(10));
+        assertThrows(Banco.SaldoInsuficiente.class, () -> banco.saque(10));
     }
 
 }
