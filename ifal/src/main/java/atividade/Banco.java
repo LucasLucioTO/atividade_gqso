@@ -12,8 +12,12 @@ public class Banco {
     }
 
     public double saque(double saque) {
-        double saldotemp = getSaldo();
-        setSaldo(saldotemp - saque);
-        return getSaldo();
+        if (getSaldo() < saque) {
+            return getSaldo();
+        } else {
+            double saldotemp = getSaldo();
+            setSaldo(saldotemp - saque);
+            return getSaldo();
+        }
     }
 }
