@@ -3,7 +3,7 @@ package atividade;
 public class Banco {
     private double saldo = 100;
 
-    private double getSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
 
