@@ -6,11 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import atividade.Banco.SaldoInsuficiente;
-import atividade.Banco.ValorNegativo;
-
 public class BancoTest {
     Banco banco;
+
+    @BeforeEach
+    public void setUp() {
+        banco = new Banco();
+    }
 
     @Test
     public void testSaque() {
